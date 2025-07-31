@@ -218,6 +218,11 @@ Preferred communication style: Simple, everyday language.
   * Atualizado em app.py (rotas /generate-pix e /check-payment-status)
   * Atualizado em medius_pag_api.py (class constructor e payload companyId)
   * Sistema ready para processar pagamentos com as novas credenciais
+- July 31, 2025: ✅ **MEDIUS PAG Secrets Secured** - Credenciais movidas para variáveis de ambiente:
+  * MEDIUS_PAG_SECRET_KEY e MEDIUS_PAG_COMPANY_ID agora em Replit Secrets
+  * Removidas todas as credenciais hardcoded do código
+  * app.py e medius_pag_api.py atualizados para usar os.environ.get()
+  * Sistema mais seguro com credenciais ocultas no código
 - July 31, 2025: ✅ **Real Lead Data Integration Enhanced** - Dados reais sempre priorizados:
   * Criada função get_real_customer_data_from_request() para extrair CPF da URL automaticamente
   * Sistema agora detecta CPF da slug da URL (ex: /12345678901) via referer header

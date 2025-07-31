@@ -15,7 +15,7 @@ class MediusPagAPI:
     """
     API_URL = "https://api.mediuspag.com/functions/v1"
     
-    def __init__(self, secret_key: str, company_id: str = "94c91ae2-3ae2-4860-942f-75f8fbd3b627"):
+    def __init__(self, secret_key: str, company_id: str):
         self.secret_key = secret_key
         self.company_id = company_id
     
@@ -76,7 +76,7 @@ class MediusPagAPI:
                     "phone": data.get('customer_phone', default_phone),
                     "cpf": data.get('customer_cpf', '').replace('.', '').replace('-', '') if data.get('customer_cpf') else None
                 },
-                "companyId": "94c91ae2-3ae2-4860-942f-75f8fbd3b627",
+                "companyId": self.company_id,
                 "externalId": transaction_id,
                 "products": [
                     {
@@ -302,9 +302,8 @@ def create_medius_pag_api(secret_key: Optional[str] = None, company_id: Optional
             raise ValueError("MEDIUS_PAG_SECRET_KEY não encontrada nas variáveis de ambiente")
     
     if not company_id:
-        company_id = os.environ.get('MEDIUS_PAG_COMPANY_ID', '30427d55-e437-4384-88de-6ba84fc74833')
+        company_id = os.environ.get('MEDIUS_PAG_COMPANY_ID')
+        if not company_id:
+            raise ValueError("MEDIUS_PAG_COMPANY_ID não encontrada nas variáveis de ambiente")
     
-    # Ensure company_id is not None
-    final_company_id = company_id or '30427d55-e437-4384-88de-6ba84fc74833'
-    
-    return MediusPagAPI(secret_key=secret_key, company_id=final_company_id)
+    return MediusPagAPI(secret_key=secret_key, company_id=company_id)

@@ -221,11 +221,8 @@ def generate_pix():
 
         app.logger.info("[PROD] Iniciando geração de PIX via MEDIUS PAG...")
 
-        # Inicializa a API MEDIUS PAG com as novas credenciais da conta atualizada
-        secret_key = "sk_live_0UfYGKXXU43iuMnIQzzpKRpb9BRgHf6LJmckw68JZVmV6pgD"
-        company_id = "94c91ae2-3ae2-4860-942f-75f8fbd3b627"
-        
-        api = create_medius_pag_api(secret_key=secret_key, company_id=company_id)
+        # Inicializa a API MEDIUS PAG usando variáveis de ambiente seguras
+        api = create_medius_pag_api()
         app.logger.info("[PROD] MEDIUS PAG API inicializada")
 
         # Buscar dados reais do cliente baseado na URL/slug do CPF
@@ -385,11 +382,8 @@ def check_payment_status(order_id):
     try:
         from medius_pag_api import create_medius_pag_api
         
-        # Usa as mesmas credenciais da geração de PIX
-        secret_key = "sk_live_0UfYGKXXU43iuMnIQzzpKRpb9BRgHf6LJmckw68JZVmV6pgD"
-        company_id = "94c91ae2-3ae2-4860-942f-75f8fbd3b627"
-        
-        api = create_medius_pag_api(secret_key=secret_key, company_id=company_id)
+        # Usa as credenciais das variáveis de ambiente seguras
+        api = create_medius_pag_api()
         status_data = api.check_transaction_status(order_id)
         
         return jsonify(status_data)
