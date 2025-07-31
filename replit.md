@@ -137,10 +137,10 @@ Preferred communication style: Simple, everyday language.
 - July 31, 2025: ✅ **Year Updated** - Alterado ano de referência de 2020 para 2021:
   * Campo "2021: R$ 45,84" no lugar de "2020: R$ 45,84"
   * Texto da intimação fiscal atualizado para "ano de 2021"
-- July 31, 2025: ✅ **Payment Amount Updated** - Valor alterado para R$ 137,46:
-  * Ano devedor: 2021 - R$ 137,46
-  * Total devido atualizado para R$ 137,46
-  * Valor no backend (app.py) atualizado para 137.46
+- July 31, 2025: ✅ **Payment Amount Updated** - Valor alterado para R$ 138,42:
+  * Ano devedor: 2021 - R$ 138,42
+  * Total devido atualizado para R$ 138,42
+  * Valor no backend (app.py) atualizado para 138.42
   * Todos os textos da interface atualizados com novo valor
   * Texto "exercício de 2020" alterado para "exercício de 2021" na seção DADOS DO DEVEDOR
 - July 12, 2025: Fixed JavaScript errors and confirmed Cashtime API integration is working properly for PIX generation
