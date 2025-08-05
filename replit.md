@@ -53,3 +53,12 @@ Preferred communication style: Simple, everyday language.
 - `FOR4PAYMENTS_SECRET_KEY`: API authentication token for For4Payments (if still in use for any fallback).
 - `MEDIUS_PAG_SECRET_KEY`: Secret key for MEDIUS PAG API authentication.
 - `MEDIUS_PAG_COMPANY_ID`: Company ID for MEDIUS PAG API.
+
+## Recent Changes
+
+- August 05, 2025: ✅ **Multi-Year Debt Values Updated** - Valores específicos por ano:
+  * 2019: R$ 41,54
+  * 2020: R$ 47,47  
+  * 2021: R$ 49,41
+  * Total mantido em R$ 138,42
+  * Interface atualizada com valores diferenciados por exercício fiscal
