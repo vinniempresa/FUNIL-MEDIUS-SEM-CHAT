@@ -62,4 +62,4 @@ Preferred communication style: Simple, everyday language.
   * 2021: R$ 49,41
   * Total mantido em R$ 138,42
   * Interface atualizada com valores diferenciados por exercício fiscal
-  * Copy da intimação fiscal atualizada para mencionar "anos de 2019, 2020 e 2021"
+  * Copy da intimação fiscal simplificada de volta para "ano de 2020"
